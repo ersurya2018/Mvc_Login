@@ -1,0 +1,16 @@
+﻿@model MVCLoginSurya.Models.Registration
+<div>
+    @using (Html.BeginForm("Reg", "Home", FormMethod.Post))
+    {
+        <label>Name</label>
+        @Html.TextBoxFor(m => m.name, new { @class = "form-control", @placeholder = "Enter name..", @required = "required" })
+        <label>Email</label>
+        @Html.TextBoxFor(m => m.email, new { @class = "form-control", @placeholder = "Enter Email..", @required = "required" })
+        <label>Password</label>
+        @Html.PasswordFor(m => m.password, new { @class = "form-control", @placeholder = "Enter Password..", @required = "required" })
+        <label>Mobile</label>
+        @Html.TextBoxFor(m => m.mobile, new { @class = "form-control", @placeholder = "Enter Mobile..", @required = "required" })
+        <br/>
+        <button type="submit" class="btn btn-success">Submit</button>
+    }
+</div>
